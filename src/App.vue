@@ -1,15 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.svg" />
+    <the-main />
+    <the-delivery />
   </div>
 </template>
 
 <script>
+import TheMain from "@/components/TheMain.vue";
+import TheDelivery from "./components/TheDelivery.vue";
 export default {
   name: "App",
-  components: {},
+  components: { TheMain, TheDelivery },
 };
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+#app {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+}
 </style>
