@@ -25,6 +25,5 @@ export default {
 }
 .copyright {
   font-size: 14px;
-  color: #283044;
 }
 </style>

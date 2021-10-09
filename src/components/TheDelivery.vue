@@ -12,7 +12,7 @@ export default {
 
 <style scoped>
 .wrap {
-  flex: 50% 0 0;
+  flex: 48.2% 1 0;
   border-radius: 40px 0 0 40px;
   background-color: #f7f7f7;
   overflow: hidden;

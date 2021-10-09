@@ -20,5 +20,6 @@ export default {
 #app {
   display: flex;
   font-family: "Roboto", sans-serif;
+  color: #283044;
 }
 </style>
