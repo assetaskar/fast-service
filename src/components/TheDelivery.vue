@@ -1,12 +1,22 @@
 <template>
   <div class="wrap">
-    <div>Delivery</div>
+    <delivery-list v-if="length" />
+    <delivery-background v-else />
   </div>
 </template>
 
 <script>
+import DeliveryBackground from "./DeliveryBackground.vue";
+import DeliveryList from "./DeliveryList.vue";
+
 export default {
   name: "Delivery",
+  components: { DeliveryBackground, DeliveryList },
+  computed: {
+    length() {
+      return this.$store.state.delivery.length;
+    },
+  },
 };
 </script>
 
@@ -16,6 +26,5 @@ export default {
   border-radius: 40px 0 0 40px;
   background-color: #f7f7f7;
   overflow: hidden;
-  /* padding-right: calc((100vw - 1290px) / 2); */
 }
 </style>
