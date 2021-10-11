@@ -66,6 +66,9 @@ export default {
   }
   .item {
     font-size: 14px;
+    line-height: 2.5;
+    width: 45%;
+    padding-left: 15px;
   }
 }
 </style>
