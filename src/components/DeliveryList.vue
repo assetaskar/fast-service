@@ -33,8 +33,8 @@ export default {
   justify-content: flex-end;
   flex-wrap: wrap;
   align-content: center;
+  padding: 25px 0;
   padding-right: calc(((100vw - 1290px) / 2) - 25px);
   margin: 0 25px;
-  padding: 25px 0;
 }
 </style>
