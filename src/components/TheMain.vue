@@ -17,9 +17,12 @@
           @help="helpHandler"
         />
       </input-search>
-      <popular-cities @getCity="getPopular" />
+      <popular-cities
+        @getCity="getPopular"
+        :class="{ 'mobile-popular': !!length }"
+      />
     </main>
-    <the-footer />
+    <the-footer class="main-footer" />
   </div>
 </template>
 
@@ -64,6 +67,9 @@ export default {
     error() {
       return this.$store.state.error;
     },
+    length() {
+      return this.$store.state.delivery.length;
+    },
   },
   watch: {
     search() {
@@ -89,12 +95,13 @@ export default {
 .wrap {
   min-height: 100vh;
   flex-basis: 50%;
-  padding-left: calc((100vw - 1290px) / 2);
-  padding-right: 145px;
+  padding-left: calc(((100vw - 1290px) / 2) - 25px);
+  margin: 0 25px;
   display: flex;
   flex-direction: column;
 }
 .main {
+  max-width: 525px;
   flex-grow: 1;
   padding: 50px 0;
 }
@@ -114,5 +121,32 @@ export default {
 }
 .mb {
   margin-bottom: 40px;
+}
+@media (max-width: 1215px) {
+  .main {
+    padding: 30px 0;
+  }
+  .title {
+    font-size: 36px;
+  }
+  .description {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  .mb {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 700px) {
+  .wrap {
+    flex-grow: 1;
+    min-height: auto;
+  }
+  .main-footer {
+    display: none;
+  }
+  .mobile-popular {
+    display: none;
+  }
 }
 </style>

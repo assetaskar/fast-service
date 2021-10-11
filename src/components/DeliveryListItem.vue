@@ -74,6 +74,7 @@ export default {
 .item {
   width: 525px;
   height: 225px;
+  flex-shrink: 1;
   background-color: #fff;
   border-radius: 22px;
   position: relative;
@@ -142,5 +143,32 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 1215px) {
+  .item {
+    height: 170px;
+  }
+  .item__main {
+    background-size: 80px;
+    background-position: right 20px bottom 25px;
+    padding: 20px;
+  }
+  .name {
+    font-size: 24px;
+  }
+  .not-available {
+    font-size: 14px;
+  }
+  .price {
+    font-size: 32px;
+  }
+}
+@media (max-width: 700px) {
+  .item {
+    width: 100%;
+  }
+  .checked img {
+    width: 23px;
+  }
 }
 </style>

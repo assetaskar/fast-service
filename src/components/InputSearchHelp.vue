@@ -44,4 +44,13 @@ export default {
 .city-list__item:hover {
   background-color: rgb(238, 238, 238);
 }
+@media (max-width: 1215px) {
+  .city-list-wrap {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+  .city-list__item {
+    padding: 25px 5px 10px;
+  }
+}
 </style>

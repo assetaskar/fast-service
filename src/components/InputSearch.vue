@@ -93,7 +93,6 @@ export default {
 .search {
   display: flex;
   justify-content: space-between;
-  font-size: 24px;
 }
 .input {
   border: none;
@@ -142,5 +141,25 @@ export default {
   color: #ff4757;
   min-height: 25px;
   margin-top: 15px;
+}
+@media (max-width: 1215px) {
+  .position {
+    padding-top: 50px;
+  }
+  .input {
+    font-size: 16px;
+    padding: 15px 20px;
+  }
+  .btn-enter {
+    padding: 16px;
+    font-size: 16px;
+  }
+  .btn-clear {
+    padding: 14.5px 18px;
+  }
+  .error {
+    margin-top: 10px;
+    font-size: 14px;
+  }
 }
 </style>

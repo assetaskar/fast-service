@@ -31,4 +31,21 @@ export default {
   left: 0;
   bottom: 0;
 }
+@media (max-width: 1215px) {
+  .title {
+    font-size: 66px;
+    left: 40%;
+  }
+}
+@media (max-width: 700px) {
+  .backdrop {
+    height: 100vw;
+  }
+  .title {
+    font-size: 36px;
+    top: 4vw;
+    left: 50%;
+    width: 125px;
+  }
+}
 </style>

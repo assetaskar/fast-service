@@ -30,9 +30,11 @@ export default {
 .list {
   height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  padding-right: calc((100vw - 1290px) / 2);
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-content: center;
+  padding-right: calc(((100vw - 1290px) / 2) - 25px);
+  margin: 0 25px;
+  padding: 25px 0;
 }
 </style>

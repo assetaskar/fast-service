@@ -59,4 +59,13 @@ export default {
 .item:hover {
   background-color: #e9f0eb;
 }
+@media (max-width: 1215px) {
+  .title {
+    font-size: 16px;
+    font-weight: normal;
+  }
+  .item {
+    font-size: 14px;
+  }
+}
 </style>

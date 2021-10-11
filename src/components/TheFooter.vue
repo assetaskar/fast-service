@@ -4,7 +4,7 @@
       <div>All rights reserved</div>
       <div>Fast service {{ new Date().getFullYear() }}</div>
     </div>
-    <the-payments />
+    <the-payments class="m" />
   </footer>
 </template>
 
@@ -25,5 +25,23 @@ export default {
 }
 .copyright {
   font-size: 14px;
+}
+@media (max-width: 700px) {
+  .footer {
+    padding: 40px 25px 25px;
+  }
+}
+@media (max-width: 350px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .copyright {
+    order: 2;
+  }
+  .m {
+    margin-bottom: 20px;
+    margin-right: 30px;
+  }
 }
 </style>

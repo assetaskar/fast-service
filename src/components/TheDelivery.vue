@@ -27,4 +27,9 @@ export default {
   background-color: #f7f7f7;
   overflow: hidden;
 }
+@media (max-width: 700px) {
+  .wrap {
+    border-radius: 40px 40px 0 0;
+  }
+}
 </style>
