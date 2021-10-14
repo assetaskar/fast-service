@@ -18,7 +18,7 @@ export default {
 
 <style scoped>
 .footer {
-  padding: 30px 0;
+  padding: 30px 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,7 +28,8 @@ export default {
 }
 @media (max-width: 700px) {
   .footer {
-    padding: 40px 25px 25px;
+    padding-top: 40px;
+    padding-bottom: 25px;
   }
 }
 @media (max-width: 350px) {

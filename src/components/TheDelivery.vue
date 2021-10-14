@@ -1,6 +1,10 @@
 <template>
   <div class="wrap">
-    <delivery-list v-if="length" />
+    <div class="list-container" v-if="length">
+      <div class="list">
+        <delivery-list />
+      </div>
+    </div>
     <delivery-background v-else />
   </div>
 </template>
@@ -22,14 +26,28 @@ export default {
 
 <style scoped>
 .wrap {
-  flex: 48.2% 1 0;
+  height: 100%;
   border-radius: 40px 0 0 40px;
   background-color: #f7f7f7;
   overflow: hidden;
 }
+.list-container {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: calc(((100vw - 1290px) / 2) - 25px);
+}
+.list {
+  flex-grow: 1;
+  max-width: 575px;
+}
 @media (max-width: 700px) {
   .wrap {
     border-radius: 40px 40px 0 0;
+  }
+  .list {
+    max-width: none;
   }
 }
 </style>

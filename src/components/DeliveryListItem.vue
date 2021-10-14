@@ -72,13 +72,10 @@ export default {
 
 <style scoped>
 .item {
-  width: 525px;
   height: 225px;
-  flex-shrink: 1;
   background-color: #fff;
   border-radius: 22px;
   position: relative;
-  box-sizing: border-box;
   display: flex;
   overflow: hidden;
   border: 1px solid #e9f0eb;
@@ -91,7 +88,6 @@ export default {
 }
 .item__main {
   height: 100%;
-  box-sizing: border-box;
   padding: 35px 45px;
   display: flex;
   flex-direction: column;
@@ -164,9 +160,6 @@ export default {
   }
 }
 @media (max-width: 700px) {
-  .item {
-    width: 100%;
-  }
   .checked img {
     width: 23px;
   }

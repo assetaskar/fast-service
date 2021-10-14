@@ -1,8 +1,18 @@
 <template>
   <div id="app">
-    <the-main />
-    <the-delivery />
-    <the-footer class="mobile-footer" />
+    <div class="main">
+      <div class="container">
+        <the-main />
+      </div>
+    </div>
+    <div class="delivery">
+      <the-delivery />
+    </div>
+    <div class="footer">
+      <div class="container">
+        <the-footer />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -24,19 +34,35 @@ export default {
   box-sizing: border-box;
 }
 #app {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "main delivery" "footer delivery";
+  align-content: space-between;
+  min-height: 100vh;
   font-family: "Roboto", sans-serif;
   color: #283044;
 }
-.mobile-footer {
-  display: none !important;
+.main {
+  grid-area: main;
+}
+.container {
+  max-width: 575px;
+  margin-left: max(0px, calc(((100vw - 1290px) / 2) - 25px));
+}
+.delivery {
+  grid-area: delivery;
+}
+.footer {
+  grid-area: footer;
 }
 @media (max-width: 700px) {
   #app {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-areas: "main" "delivery" "footer";
+    grid-template-rows: auto 1fr auto;
   }
-  .mobile-footer {
-    display: flex !important;
+  .container {
+    max-width: none;
   }
 }
 </style>

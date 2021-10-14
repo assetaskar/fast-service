@@ -22,12 +22,10 @@
         :class="{ 'mobile-popular': !!length }"
       />
     </main>
-    <the-footer class="main-footer" />
   </div>
 </template>
 
 <script>
-import TheFooter from "./TheFooter.vue";
 import TheHeader from "./TheHeader.vue";
 import InputSearch from "./InputSearch.vue";
 import InputSearchHelp from "./InputSearchHelp.vue";
@@ -37,7 +35,6 @@ export default {
   name: "Main",
   components: {
     TheHeader,
-    TheFooter,
     InputSearch,
     InputSearchHelp,
     PopularCities,
@@ -93,15 +90,11 @@ export default {
 
 <style scoped>
 .wrap {
-  min-height: 100vh;
-  flex-basis: 50%;
-  padding-left: calc(((100vw - 1290px) / 2) - 25px);
-  margin: 0 25px;
   display: flex;
   flex-direction: column;
+  padding: 0 25px;
 }
 .main {
-  max-width: 525px;
   flex-grow: 1;
   padding: 50px 0;
 }
@@ -138,13 +131,6 @@ export default {
   }
 }
 @media (max-width: 700px) {
-  .wrap {
-    flex-grow: 1;
-    min-height: auto;
-  }
-  .main-footer {
-    display: none;
-  }
   .mobile-popular {
     display: none;
   }
